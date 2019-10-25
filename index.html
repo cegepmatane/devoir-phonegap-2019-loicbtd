@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+
+Erreur dans l'app !
+
+<script type="plain/text" id="page-liste-devoir">
+	<div class="page-liste-devoir">
+		<h1> Liste des devoirs</h1>
+		<a href="#ajouter-devoir">Ajouter un devoir</a>
+		<ul id="liste-devoir"></ul>
+	</div>
+</script>
+
+<script type="plain/text" id="page-devoir">
+	<h1 id="devoir-nom"></h1>
+	<h2 id="devoir-marque"></h2>
+	<p id="devoir-description"></p>
+	<a href="#">Revenir &agrave; la liste</a>
+</script>
+
+<script type="plain/text" id="page-ajouter-devoir">
+	<h1>Ajouter un devoir</h1>
+	<article id='main' class="current">
+		<section>
+			<form id="formulaire-ajouter">
+				<fieldset>
+					<legend>Identification du devoir</legend>
+					<div>
+						<label for="devoir-nom">Nom</label>
+						<input type="text" name="nom" id="devoir-nom"/>
+					</div>
+					<div>
+						<label for="devoir-marque">Marque</label>
+						<input type="text" name="marque" id="devoir-marque"/>
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend>D&eacute;tails sur le devoir</legend>
+					<div>
+						<label for="devoir-description">Description</label>
+						<textarea name="description" id="devoir-description"></textarea>
+					</div>
+				</fieldset>
+				<input type="submit" id="ajouter" name="ajouter" value="Ajouter"/>
+			</form>
+			<a href="#">Annuler et revenir &agrave; la liste</a>
+		</section>
+	</article>
+</script>
+
+<script type="plain/text" id="page-modifier-devoir">
+	<h1>Modifier un devoir</h1>
+	<article id='main' class="current">
+		<section>
+			<form id="formulaire-modifier">
+				<fieldset>
+					<legend>Identification du devoir</legend>
+					<div>
+						<label for="devoir-nom">Nom</label>
+						<input type="text" name="nom" id="devoir-nom"/>
+					</div>
+					<div>
+						<label for="devoir-marque">Marque</label>
+						<input type="text" name="marque" id="devoir-marque"/>
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend>D&eacute;tails sur le devoir</legend>
+					<div>
+						<label for="devoir-description">Description</label>
+						<textarea name="description" id="devoir-description"></textarea>
+					</div>
+				</fieldset>
+				<input type="submit" id="modifier" name="modifier" value="Modifier"/>
+			</form>
+			<a href="#">Annuler et revenir &agrave; la liste</a>
+		</section>
+	</article>
+</script>
+
+
+<script src="modele/Devoir.js"></script>
+<script src="donnee/DevoirDAO.js"></script>
+<script src="vue/ListeDevoirVue.js"></script>
+<script src="controleur/application.js"></script>
+
+</body>
+</html>
