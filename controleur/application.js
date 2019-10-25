@@ -16,6 +16,10 @@
             var listeDevoirVue = new ListeDevoirVue(listeDevoirDonnee);
             listeDevoirVue.afficher();
         }
+        else if(hash.match(/^#ajouter-devoir/)) {
+            var ajouterDevoirVue = new AjouterDevoirVue(actionAjouterDevoir);
+            ajouterDevoirVue.afficher();
+        }
         else {
             var navigation = hash.match(/^#devoir\/([0-9]+)/);
             var idDevoir = navigation[1];
@@ -24,6 +28,11 @@
             var devoirVue = new DevoirVue(listeDevoirDonnee[idDevoir]);
             devoirVue.afficher();
         }
+    }
+
+    var actionAjouterDevoir = function(devoir) {
+        devoirDAO.ajouter(devoir);
+        window.location.hash = "#";
     }
 
     initialiser();

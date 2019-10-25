@@ -8,4 +8,9 @@ var DevoirDAO = function() {
     this.lister = function() {
         return listeDevoir;
     }
+
+    this.ajouter = function(devoir) {
+        devoir.id = listeDevoir.length;
+        listeDevoir.push(devoir);
+    }
 }
