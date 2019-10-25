@@ -16,6 +16,14 @@
             var listeDevoirVue = new ListeDevoirVue(listeDevoirDonnee);
             listeDevoirVue.afficher();
         }
+        else {
+            var navigation = hash.match(/^#devoir\/([0-9]+)/);
+            var idDevoir = navigation[1];
+            
+            var listeDevoirDonnee = devoirDAO.lister();
+            var devoirVue = new DevoirVue(listeDevoirDonnee[idDevoir]);
+            devoirVue.afficher();
+        }
     }
 
     initialiser();
