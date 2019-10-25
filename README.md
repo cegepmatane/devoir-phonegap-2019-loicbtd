@@ -1,1 +1,4 @@
-# projet-initial
+# Projet Devoir Phonegap 
+
+* Loïc BERTRAND
+* Lien vidéo : 
