@@ -13,4 +13,8 @@ var DevoirDAO = function() {
         devoir.id = listeDevoir.length;
         listeDevoir.push(devoir);
     }
+
+    this.modifier = function(devoir) {
+        listeDevoir[devoir.id] = devoir;
+    }
 }

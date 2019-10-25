@@ -20,6 +20,14 @@
             var ajouterDevoirVue = new AjouterDevoirVue(actionAjouterDevoir);
             ajouterDevoirVue.afficher();
         }
+        else if(hash.match(/^#modifier-devoir\/([0-9]+)/)){
+            var navigation = hash.match(/^#modifier-devoir\/([0-9]+)/);
+            var idDevoir = navigation[1];
+            
+            var listeDevoirDonnee = devoirDAO.lister();
+            var modifierDevoirVue = new ModifierDevoirVue(listeDevoirDonnee[idDevoir], actionModifierDevoir);
+            modifierDevoirVue.afficher();
+        }
         else {
             var navigation = hash.match(/^#devoir\/([0-9]+)/);
             var idDevoir = navigation[1];
@@ -32,6 +40,11 @@
 
     var actionAjouterDevoir = function(devoir) {
         devoirDAO.ajouter(devoir);
+        window.location.hash = "#";
+    }
+
+    var actionModifierDevoir = function(devoir) {
+        devoirDAO.modifier(devoir);
         window.location.hash = "#";
     }
 
