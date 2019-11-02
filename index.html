@@ -1,23 +1,43 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>Document</title>
-    <style>
-    </style>
+	<title>Mes Devoirs</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="ressource/style/app-style.css" rel="stylesheet">
 </head>
 <body>
 
-Erreur dans l'app !
-
 <script type="plain/text" id="page-liste-devoir">
+	<div class="navbar-fixed">
+		<nav class="black">
+			<div class="nav-wrapper">
+				<a href="#" class="brand-logo center">
+					<i class="fas fa-book"></i> Mes Devoirs
+				</a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+				</ul>
+			</div>
+		</nav>
+	</div>
 	<div class="page-liste-devoir">
-		<h1> Liste des devoirs</h1>
-		<a href="#ajouter-devoir">Ajouter un devoir</a>
-		<ul id="liste-devoir"></ul>
+		<ul class="collection" id="liste-devoir"></ul>				
 	</div>
 </script>
 
 <script type="plain/text" id="page-devoir">
+	<div class="navbar-fixed">
+		<nav class="black">
+			<div class="nav-wrapper">
+				<a href="#" class="brand-logo center">
+					<i class="fas fa-book"></i> Devoir
+				</a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+				</ul>
+			</div>
+		</nav>
+	</div>
 	<h1 id="devoir-nom"></h1>
 	<h2 id="devoir-matiere"></h2>
 	<p id="devoir-description"></p>
@@ -25,7 +45,17 @@ Erreur dans l'app !
 </script>
 
 <script type="plain/text" id="page-ajouter-devoir">
-	<h1>Ajouter un devoir</h1>
+	<div class="navbar-fixed">
+		<nav class="black">
+			<div class="nav-wrapper">
+				<a href="#" class="brand-logo center">
+					<i class="fas fa-book"></i> Ajout d'un devoir
+				</a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+				</ul>
+			</div>
+		</nav>
+	</div>
 	<article id='main' class="current">
 		<section>
 			<form id="formulaire-ajouter">
@@ -55,7 +85,17 @@ Erreur dans l'app !
 </script>
 
 <script type="plain/text" id="page-modifier-devoir">
-	<h1>Modifier un devoir</h1>
+	<div class="navbar-fixed">
+		<nav class="black">
+			<div class="nav-wrapper">
+				<a href="#" class="brand-logo center">
+					<i class="fas fa-book"></i> Modification du devoir
+				</a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+				</ul>
+			</div>
+		</nav>
+	</div>
 	<article id='main' class="current">
 		<section>
 			<form id="formulaire-modifier">
@@ -84,6 +124,8 @@ Erreur dans l'app !
 	</article>
 </script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 <script src="modele/Devoir.js"></script>
 <script src="donnee/DevoirDAO.js"></script>
