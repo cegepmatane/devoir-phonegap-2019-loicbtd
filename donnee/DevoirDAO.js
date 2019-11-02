@@ -28,10 +28,12 @@ var DevoirDAO = function() {
     }
 
     this.ajouter = function(devoir) {
-        if(listeDevoir.length > 0)
+        if(listeDevoir.length > 0) {
             devoir.id = listeDevoir[listeDevoir.length-1].id + 1;
-        else
+        }
+        else {
             devoir.id = 0;
+        }
         
         listeDevoir[devoir.id] = devoir;
         localStorage['devoir'] = JSON.stringify(listeDevoir);

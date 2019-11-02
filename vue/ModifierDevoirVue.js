@@ -7,7 +7,7 @@ var ModifierDevoirVue = (function() {
             elementBody.innerHTML = pageModifierDevoir;
 
             document.getElementById("devoir-nom").value = devoir.nom;
-            document.getElementById("devoir-matiere").value = devoir.marque;
+            document.getElementById("devoir-matiere").value = devoir.matiere;
             document.getElementById("devoir-description").value = devoir.description;
             
             var formulaireModifier = document.getElementById("formulaire-modifier");
