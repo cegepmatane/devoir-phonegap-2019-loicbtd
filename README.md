@@ -3,4 +3,4 @@
 ## Gestion d'une liste de devoirs (nom, matiere, description)
 
 * Loïc BERTRAND
-* Lien vidéo : 
+* Lien vidéo : https://youtu.be/QcmYNkFZIko

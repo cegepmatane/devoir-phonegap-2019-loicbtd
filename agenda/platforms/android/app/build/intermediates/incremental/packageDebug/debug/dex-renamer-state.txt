@@ -1,4 +1,4 @@
-#Sat Nov 09 20:18:40 EST 2019
+#Sat Nov 09 20:58:07 EST 2019
 base.0=/home/loicbtd/project/cours/programmation-mobile_local/devoir-cordova/devoir-phonegap-2019-loicbtd/agenda/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex
